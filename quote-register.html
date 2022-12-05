@@ -28,7 +28,40 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<!-- java na astig -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="">
+  var subjectObject = {
+  "Laguna": {
+    "Calamba": ["Links", "Images", "Tables", "Lists"],
+    "Cabuyao": ["Borders", "Margins", "Backgrounds", "Float"],
+    "Santa Rosa": ["Variables", "Operators", "Functions", "Conditions"]    
+  },
+  "Batangas": {
+    "PHP": ["Variables", "Strings", "Arrays"],
+    "SQL": ["SELECT", "UPDATE", "DELETE"]
+  },
+  "NCR": {
+    "PHP": ["Variables", "Strings", "Arrays"],
+    "SQL": ["SELECT", "UPDATE", "DELETE"]
+  }
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("subject");
+  var topicSel = document.getElementById("topic");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+}
+</script>
 </head>
 
 <body>
@@ -76,7 +109,7 @@
                     </div>
 
 
-                      <div class="col-12">
+                      <!--<div class="col-12">
                   <label for="validationDefault03" class="form-label">Province</label>
                   <select class="form-select" id="validationDefault03" required>
                     <option selected disabled value="">Select</option>
@@ -122,10 +155,20 @@
                     <option>Victoria</option>
 
                   </select>
-                </div>
+                </div> -->
+                    <div class="col-12">
+                Subjects: <select name="subject" id="subject">
+                <option value="" selected="selected">Select subject</option>
+                </select>
+              </div>
+              <div class="col-12">
+                Topics: <select name="topic" id="topic">
+                <option value="" selected="selected">Please select subject first</option>
+                </select>
+              </div>
                  
                   <div class="col-12">
-                      <label for="yourName" class="form-label">Your Address</label>
+                      <label for="yourName" class="form-label">Baranggay</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Please, enter your address!</div>
                   </div>
@@ -139,7 +182,8 @@
                     <option>P 22,000 - 55,000</option>
                     <option>P 55,001 - 100,000</option>
                     <option>P 100,001 - 150,000</option>
-                    <option>P 150,001 or higher</option>
+                    <option>P 150,001 - 250,000</option>
+                    <option>P 250,001 or higher</option>
                   </select>
                 </div>
 
@@ -149,7 +193,8 @@
                     <option selected disabled value="">Select</option>
                     <option>1.0 - 2.5 KW</option>
                     <option>2.6 - 5.0 KW</option>
-                    <option>5.1 KW or higher</option>
+                    <option>5.1 - 10.0 KW</option>
+                    option>10.1 KW or higher</option>
                   </select>
                 </div>
 
