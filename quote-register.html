@@ -28,22 +28,97 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-<!-- java na astig -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="">
   var subjectObject = {
+"Batangas": {
+    "Agoncillo": [],
+    "Alitagtag": [],
+    "Balayan": [],
+    "Balete": [],
+    "Batangas City": [],
+    "Bauan": [],
+    "Calaca": [],
+    "Calatagan": [],
+    "Cuenca": [],
+    "Ibaan": [],
+    "Laurel": [],
+    "Lemery": [],                                    
+    "Lian": [],
+    "Lipa": [],
+    "Lobo": [],
+    "Mabini": [],
+    "Malvar": [],
+    "Mataasnakahoy": [],
+    "Nasugbu": [],
+    "Padre Garcia": [],
+    "Rosario": [],
+    "San Jose": [],
+    "San Juan": [],
+    "San Luis": [],
+    "San Nicolas": [],
+    "San Pascual": [],
+    "Santa Teresita": [],
+    "Santo Tomas": [],
+    "Taal": [],
+    "Talisay": [],
+    "Tanauan": [],
+    "Taysan": [],
+    "Tingloy": [],
+    "Tuy": []
+},
   "Laguna": {
-    "Calamba": ["Links", "Images", "Tables", "Lists"],
-    "Cabuyao": ["Borders", "Margins", "Backgrounds", "Float"],
-    "Santa Rosa": ["Variables", "Operators", "Functions", "Conditions"]    
+    "Alaminos": [],
+    "Bay": [],
+    "Binan": [],
+    "Cabuyao": [],
+    "Calamba": [],
+    "Calauan": [],
+    "Cavinti": [], 
+    "Famy": [],
+    "Kalayaan": [],
+    "Liliw": [],
+    "Los Banos": [],
+    "Luisiana": [],
+    "Lumban": [],
+    "Mabitac": [],
+    "Magdalena": [],
+    "Majayjay": [],
+    "Nagcarlan": [],
+    "Paete": [],
+    "Pagsanjan": [],
+    "Pakil": [],
+    "Pangil": [],
+    "Pila": [],
+    "Rizal": [],
+    "San Pablo": [],
+    "San Pedro": [],
+    "Santa Cruz": [],
+    "Santa Maria": [],
+    "Santa Rosa": [],
+    "Siniloan": [],
+    "Victoria": [] 
   },
-  "Batangas": {
-    "PHP": ["Variables", "Strings", "Arrays"],
-    "SQL": ["SELECT", "UPDATE", "DELETE"]
-  },
+
   "NCR": {
-    "PHP": ["Variables", "Strings", "Arrays"],
-    "SQL": ["SELECT", "UPDATE", "DELETE"]
+
+    "Caloocan City": [],                                  
+    "Las Piñas City": [],
+    "Makati City": [],
+    "Malabon City": [],
+    "Mandaluyong City": [],
+    "Manila City": [],
+    "Marikina City": [],
+    "Muntinlupa City": [],
+    "Navotas City": [],
+    "Parañaque City": [],
+    "Pasay City": [],
+    "Pasig City": [],
+    "Quezon City": [],
+    "San Juan City": [],
+    "Taguig City": [],
+    "Valenzuela City": []
+
   }
 }
 window.onload = function() {
@@ -62,6 +137,8 @@ window.onload = function() {
   }
 }
 </script>
+
+
 </head>
 
 <body>
@@ -91,7 +168,7 @@ window.onload = function() {
 
                   <form class="row g-3 needs-validation">
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Full Name</label>
+                      <label for="yourName" class="form-label">Your Name</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
@@ -103,10 +180,11 @@ window.onload = function() {
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Email</label>
+                      <label for="yourEmail" class="form-label">Your Email</label>
                       <input type="email" name="email" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
+
 
 
                       <!--<div class="col-12">
@@ -154,24 +232,41 @@ window.onload = function() {
                     <option>Siniloan</option>
                     <option>Victoria</option>
 
+
+
+
+
+
+
+  
+
+  "Laguna": {
+
+    
+
+ 
+
+}
+
                   </select>
                 </div> -->
-                    <div class="col-12">
-                Subjects: <select name="subject" id="subject">
-                <option value="" selected="selected">Select subject</option>
+                <div class="col-12">
+                Province: <select name="subject" id="subject">
+                <option value="" selected="selected">Select Province</option>
                 </select>
               </div>
               <div class="col-12">
-                Topics: <select name="topic" id="topic">
-                <option value="" selected="selected">Please select subject first</option>
+                City: <select name="topic" id="topic">
+                <option value="" selected="selected">Please select province first</option>
                 </select>
               </div>
-                 
+
                   <div class="col-12">
                       <label for="yourName" class="form-label">Baranggay</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
-                      <div class="invalid-feedback">Please, enter your address!</div>
-                  </div>
+                      <div class="invalid-feedback">Please, enter your baranggay!</div>
+                    </div>
+
 
                     <hr>
 
@@ -179,10 +274,9 @@ window.onload = function() {
                   <label for="validationDefault03" class="form-label">Budget</label>
                   <select class="form-select" id="validationDefault03" required>
                     <option selected disabled value="">Select</option>
-                    <option>P 22,000 - 55,000</option>
-                    <option>P 55,001 - 100,000</option>
-                    <option>P 100,001 - 150,000</option>
-                    <option>P 150,001 - 250,000</option>
+                    
+                    <option>P 0 - 55,000</option>
+                    <option>P 55,001 - 250,000</option>
                     <option>P 250,001 or higher</option>
                   </select>
                 </div>
@@ -192,9 +286,8 @@ window.onload = function() {
                   <select class="form-select" id="validationDefault03" required>
                     <option selected disabled value="">Select</option>
                     <option>1.0 - 2.5 KW</option>
-                    <option>2.6 - 5.0 KW</option>
-                    <option>5.1 - 10.0 KW</option>
-                    option>10.1 KW or higher</option>
+                    <option>2.6 - 6.0 KW</option>
+                    <option>6.1 KW or higher</option>
                   </select>
                 </div>
 
