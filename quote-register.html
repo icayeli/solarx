@@ -168,9 +168,15 @@ window.onload = function() {
 
                   <form class="row g-3 needs-validation">
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
-                      <div class="invalid-feedback">Please, enter your name!</div>
+                      <label for="firstName" class="form-label">First Name</label>
+                      <input type="text" name="name" class="form-control" id="firstName" required>
+                      <div class="invalid-feedback">Please, enter your first name!</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input type="text" name="name" class="form-control" id="lastName" required>
+                    <div class="invalid-feedback">Please, enter your last name!</div>
                     </div>
 
                     <div class="col-12">
@@ -180,7 +186,7 @@ window.onload = function() {
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Your Email</label>
+                      <label for="yourEmail" class="form-label">Email Address</label>
                       <input type="email" name="email" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
@@ -250,22 +256,23 @@ window.onload = function() {
 
                   </select>
                 </div> -->
-                <div class="col-12">
+
+
                 Province: <select name="subject" id="subject">
                 <option value="" selected="selected">Select Province</option>
                 </select>
-              </div>
-              <div class="col-12">
+
                 City: <select name="topic" id="topic">
                 <option value="" selected="selected">Please select province first</option>
                 </select>
-              </div>
+
 
                   <div class="col-12">
                       <label for="yourName" class="form-label">Baranggay</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Please, enter your baranggay!</div>
                     </div>
+
 
 
                     <hr>
@@ -295,7 +302,7 @@ window.onload = function() {
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#"><u>Terms and Conditions</u></a></label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
                     </div>
