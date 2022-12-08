@@ -28,6 +28,12 @@ if(isset($_SESSION["id"])){
             $firstname = $customer["First_Name"];
             $lastname = $customer["Last_Name"];
             $mobile = $customer["Mobile_Number"];
+            $email = $customer["Email"];
+            $baranggay = $customer["Baramggay"];
+            $province = $customer["Province"];
+            $city = $customer["City"];
+            $budget = $customer["Budget"];
+            $powerconsumption = $customer["Power_Consumption"];
     
         }
     
@@ -134,7 +140,7 @@ else{
                 <p><?php echo $firstname ." ". $lastname?></p>
               </div>
                 <h4>Address</h4>
-                <p><?php echo $baranggay .", ". $city .", ". $province?></p>
+                <p><?php echo $baranggay, ." ". $city, ." ". $province?></p>
               </div>
 
               <div class="email">
