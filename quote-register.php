@@ -197,16 +197,13 @@ window.onload = function() {
 
              
              
-                <div class="col-12">
-                Province: <select name="Province" id="subject">
+                Province: <select name="subject" id="subject">
                 <option value="" selected="selected">Select Province</option>
                 </select>
-              </div>
-              <div class="col-12">
-                City: <select name="City" id="topic">
+
+                City: <select name="topic" id="topic">
                 <option value="" selected="selected">Please select province first</option>
                 </select>
-              </div>
 
                   <div class="col-12">
                       <label for="yourName" class="form-label">Baranggay</label>
