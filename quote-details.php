@@ -206,7 +206,8 @@ else{
                 <div class="error-message"></div>
                 <div class="sent-message">Thank you for choosing us! Please select your choice then proceed to check out.</div>
               </div>
-              <div class="text-right"><button type="submit">PURCHASE</button></div>
+              
+              <div class="text-right"> <a href="quote-waybill.php" class="w">PURCHASE</a></div>
           <!-- end PURCHASE button -->
 
           </div>
@@ -248,7 +249,7 @@ else{
                 <div class="error-message"></div>
                 <div class="sent-message">Thank you for choosing us! Please select your choice then proceed to check out.</div>
               </div>
-              <div class="text-right"><button type="submit">PURCHASE</button></div>
+              <div class="text-right"> <a href="quote-waybill.php" class="w">PURCHASE</a></div>
           <!-- end PURCHASE button -->
 
           </div>
