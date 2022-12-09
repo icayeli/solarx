@@ -28,6 +28,12 @@ if(isset($_SESSION["id"])){
             $firstname = $customer["First_Name"];
             $lastname = $customer["Last_Name"];
             $mobile = $customer["Mobile_Number"];
+            $email = $customer["Email"];
+            $baranggay = $customer["Baranggay"];
+            $province = $customer["Province"];
+            $city = $customer["City"];
+            $budget = $customer["Budget"];
+            $powerconsumption = $customer["Power_Consumption"];
     
         }
     
@@ -131,10 +137,10 @@ else{
               <h6> Please check the following details if correct </h6>
               <div class="name">
                 <h4>Name</h4>
-                <p><?php echo $firstname ." ". $lastname?></p>
+                <p><?php echo $firstname ." ". $lastname ?></p>
               </div>
                 <h4>Address</h4>
-                <p><?php echo $baranggay .", ". $city .", ". $province?></p>
+                <p><?php echo $baranggay ." ". $city ." " . $province?></p>
               </div>
 
               <div class="email">
@@ -336,5 +342,5 @@ else{
   <script src="assets/js/main.js"></script>
 
 </body>
-
+<!--pag di mo to nakita di yan updated -->
 </html>
