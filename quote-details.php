@@ -140,7 +140,7 @@ else{
                 <p><?php echo $firstname ." ". $lastname ?></p>
               </div>
                 <h4>Address</h4>
-                <p><?php echo $baranggay ." ". $city ." " . $province?></p>
+                <p><?php echo $baranggay?>, <?php echo $city?>, <?php echo $province?> </p>
               </div>
 
               <div class="email">
