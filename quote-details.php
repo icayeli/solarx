@@ -191,10 +191,10 @@ else{
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Carbon Lithium</td>
-                    <td>Blue Carbon Lithium 45 <br> degress boiled in the sun</td>
-                    <td>1.5</td>
-                    <td>P 22,000</td>
+                    <td>Grid Tie</td>
+                    <td>3x Jinko 405 watts mono panel <br> 1x KW Sofar GTI Inverter with current limiter</td>
+                    <td>1.2</td>
+                    <td>P 62,000 - 66,000</td>
                   </tr>
                 </tbody>
               </table>
@@ -234,10 +234,10 @@ else{
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Carbon Lithium</td>
-                    <td>Blue Carbon Lithium 45 <br> degress boiled in the sun</td>
-                    <td>1.5</td>
-                    <td>P 22,000</td>
+                    <td>Grid Tie</td>
+                    <td>5x Canadian solar 450 watts mono panel <br> 1x 2KW Sofar GTI Inverter with current limiter</td>
+                    <td>2.2</td>
+                    <td>P 96,000 - 100,500</td>
                   </tr>
                 </tbody>
               </table>
