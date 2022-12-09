@@ -197,11 +197,11 @@ window.onload = function() {
 
              
              
-                Province: <select name="subject" id="subject">
+                Province: <select name="Province" id="subject">
                 <option value="" selected="selected">Select Province</option>
                 </select>
 
-                City: <select name="topic" id="topic">
+                City: <select name="City" id="topic">
                 <option value="" selected="selected">Please select province first</option>
                 </select>
 
