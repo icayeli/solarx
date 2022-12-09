@@ -146,7 +146,7 @@ else{
                     <td scope="col">Name: <?php echo $firstname ." ". $lastname?>
                       <br> Contact Number: <?php echo $mobile?>
                       <br> Email: <?php echo $email?>
-                      <br> Address: <?php echo $baranggay?> , <?php echo $city?> , <?php echo $province?>
+                      <br> Address: <?php echo $baranggay?>, <?php echo $city?>, <?php echo $province?>
                       </td>
                   </tr>
                 </thead>
@@ -154,7 +154,7 @@ else{
                 <thead>
                   <tr>
                     <th scope="col">COMPANY DETAILS</th>
-                    <td scope="col">SolarX
+                    <td scope="col">Solarx Solar Panel Installation Services
                       <br> Contact Number: 0932 284 9614
                       <br> Email: junelai24@gmail.com
                       <br> Address: Landmark Subdivision Brgy. Parian, Calamba City Laguna 4027, Philippines
