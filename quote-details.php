@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+include "encrypter.php";
+
 $servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
 $username = "root"; // default username
 $password = ""; //password used during installation of xampp
@@ -140,7 +143,7 @@ else{
                 <p><?php echo $firstname ." ". $lastname ?></p>
               </div>
                 <h4>Address</h4>
-                <p><?php echo $baranggay?>, <?php echo $city?>, <?php echo $province?> </p>
+                <p><?php echo decode($baranggay)?>, <?php echo decode($city)?>, <?php echo decode($province)?></p>
               </div>
 
               <div class="email">
@@ -150,7 +153,7 @@ else{
 
               <div class="phone">
                 <h4>Phone Number</h4>
-                <p><?php echo $mobile?></p>
+                <p><?php echo decode($mobile)?></p>
               </div>
 
               <div class="budget">
@@ -173,6 +176,19 @@ else{
 
 
            
+<?php
+	if (mysqli_num_rows($package_result)>0)
+	{
+        while($package = mysqli_fetch_assoc($package_result))
+		{
+            $name = $package["Name"];
+            $details = $package["Details"];
+            $watts = $package["Watts"];
+            $price = $package["Price"];
+            $budget = $package["Budget"];
+            $wattrange = $package["WattRange"];
+
+?>
 <!-- ONE -->
           <div class="card">
             <div class="card-body">
@@ -191,10 +207,10 @@ else{
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Grid Tie</td>
-                    <td>3x Jinko 405 watts mono panel <br> 1x KW Sofar GTI Inverter with current limiter</td>
-                    <td>1.2</td>
-                    <td>P 62,000 - 66,000</td>
+                    <td><?php echo $name ?></td>
+                    <td><?php echo $details ?></td>
+                    <td><?php echo $watts ?></td>
+                    <td><?php echo $price ?></td>
                   </tr>
                 </tbody>
               </table>
@@ -213,56 +229,15 @@ else{
           </div>
         </div>
 <!-- end ONE -->
-
 &nbsp
-
-<!-- TWO -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-          <!-- ITEM -->
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Package</th>
-                    <th scope="col">Details</th>
-                    <th scope="col">Watts</th>
-                    <th scope="col">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Grid Tie</td>
-                    <td>5x Canadian solar 450 watts mono panel <br> 1x 2KW Sofar GTI Inverter with current limiter</td>
-                    <td>2.2</td>
-                    <td>P 96,000 - 100,500</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- end ITEM-->
-
-              <!-- PURCHASE button -->
-              <div class="my-2">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Thank you for choosing us! Please select your choice then proceed to check out.</div>
-              </div>
-              <div class="text-right"> <a href="quote-waybill.php" class="w">PURCHASE</a></div>
-          <!-- end PURCHASE button -->
-
-          </div>
-        </div>
-<!-- end TWO-->
-
-
+<?php
+		}
+	}
+?>
       </div>
     </form>
-     
-
-    </section>
-
+ </section>
+            
    <!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
