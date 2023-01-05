@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+include "encrypter.php";
+
 $servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
 $username = "root"; // default username
 $password = ""; //password used during installation of xampp
@@ -132,7 +135,7 @@ else{
 
                 <thead>
                   <tr>
-                    <th scope="col">TO address:  <?php echo $baranggay?> , <?php echo $city?> , <?php echo $province?>  </th>
+                    <th scope="col">TO address:  <?php echo decode($baranggay)?> , <?php echo decode($city)?> , <?php echo decode($province)?></th>
                   </tr>
                 </thead>
 
@@ -144,9 +147,9 @@ else{
                   <tr>
                     <th scope="col-">BUYER</th>
                     <td scope="col">Name: <?php echo $firstname ." ". $lastname?>
-                      <br> Contact Number: <?php echo $mobile?>
+                      <br> Contact Number: <?php echo decode($mobile)?>
                       <br> Email: <?php echo $email?>
-                      <br> Address: <?php echo $baranggay?>, <?php echo $city?>, <?php echo $province?>
+                      <br> Address: <?php echo decode($baranggay)?>, <?php echo decode($city)?>, <?php echo decode($province)?>
                       </td>
                   </tr>
                 </thead>
