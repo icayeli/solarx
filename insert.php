@@ -5,6 +5,8 @@
 session_start();
 use LDAP\Result;
 
+include "encrypter.php";
+
 $servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
 $username = "root"; // default username
 $password = ""; //password used during installation of xampp
@@ -32,7 +34,7 @@ if ($conn->connect_error)
 //Create sql command for insert
 //SQL/MYSQL: Insert into studentTable(Surname,GivenName,MiddleName) Values('1','2','3');
 //C++: cout << "Insert into " + studentTable + "(Surname,GivenName,MiddleName)" + "Values('" + surname + "','" + givenname + "','" + middlename + "');";
-$sqlInsert = "Insert into " . $tablename . "(First_Name,Last_Name,Mobile_Number,Email,Province,City,Baranggay,Budget,Power_Consumption)" . "Values('".$firstname."','".$lastname."','".$mobile."','".$email."','".$province."','".$city."','".$baranggay."','".$budget."','".$powerconsumption."');";
+$sqlInsert = "Insert into " . $tablename . "(First_Name,Last_Name,Mobile_Number,Email,Province,City,Baranggay,Budget,Power_Consumption)" . "Values('".$firstname."','".$lastname."','".encode($mobile)."','".$email."','".encode($province)."','".encode($city)."','".encode($baranggay)."','".$budget."','".$powerconsumption."');";
 
 
 
