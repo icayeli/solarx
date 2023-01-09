@@ -219,8 +219,8 @@ window.onload = function() {
                   <select name="Budget" class="form-select" id="validationDefault03" required>
                     <option selected disabled value="">Select</option>
                     
-                    <option>P 0 - 55,000</option>
-                    <option>P 55,001 - 250,000</option>
+                    <option>P 0 - 100,000</option>
+                    <option>P 100,001 - 250,000</option>
                     <option>P 250,001 or higher</option>
                   </select>
                 </div>
