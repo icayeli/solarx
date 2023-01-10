@@ -41,6 +41,8 @@ if(isset($_SESSION["id"])){
         }
     
     }
+	$package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
+	$package_result = mysqli_query($conn, $package_query);
 }
 else{
     header("Location: index.html");
