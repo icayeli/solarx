@@ -236,13 +236,16 @@ else{
 		}
 	}
   else{
-
-    echo "<h3 align='center'><br><br><br>Sorry but we don't have a recommended package for you. Please try again with another budget and power consumption option.</h3>";
-
+    echo "<h3 align='center'><br><br><br><br>Sorry but we don't have a recommended package for you. Please try again with another budget and power consumption option.</h3>";
 
   }
   
 ?>
+<center>
+  <br>
+ <div class="text-right"> <a href="quote-register.php" class="w">Go Back</a></div>
+</center>
+
       </div>
     </form>
  </section>
