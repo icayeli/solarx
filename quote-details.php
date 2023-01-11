@@ -235,6 +235,13 @@ else{
 <?php
 		}
 	}
+  else{
+
+    echo "<h3 align='center'><br><br><br>Sorry but we don't have a recommended package for you. Please try again with another budget and power consumption option.</h3>";
+
+
+  }
+  
 ?>
       </div>
     </form>
