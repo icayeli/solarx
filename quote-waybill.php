@@ -41,10 +41,13 @@ if(isset($_SESSION["id"])){
         }
     
     }
+      $package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
+      $package_result = mysqli_query($conn, $package_query);
 }
 else{
     header("Location: index.html");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -163,15 +166,33 @@ else{
                       <br> Address: Landmark Subdivision Brgy. Parian, Calamba City Laguna 4027, Philippines
                       </td>
                   </tr>
-                </thead>
+                </thead><?php
+  if (mysqli_num_rows($package_result)>0)
+  {
+        while($package = mysqli_fetch_assoc($package_result))
+    {
+            $name = $package["Name"];
+            $details = $package["Details"];
+            $watts = $package["Watts"];
+            $price = $package["Price"];
+            $budget = $package["Budget"];
+            $wattrange = $package["WattRange"];
 
+?>
                 <thead>
+                  
                   <tr>
                     <th scope="col">ORDER DETAILS</th>
-                    <td>Blue Carbon
-                      <br> 1.5 KW</td>
+                    <td><?php echo $name ?>
+                    <br><?php echo $details ?>
+                    <br><?php echo $watts ?>
+                    <br><?php echo $price ?></td>
                   </tr>
                 </thead>
+<?php }}?>
+
+
+              </table>
 
               </table>
 
