@@ -38,11 +38,11 @@ if(isset($_SESSION["id"])){
             $budget = $customer["Budget"];
             $powerconsumption = $customer["Power_Consumption"];
     
-        }
+         }
     
     }
-	$package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
-	$package_result = mysqli_query($conn, $package_query);
+  $package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
+  $package_result = mysqli_query($conn, $package_query);
 }
 else{
     header("Location: index.html");
@@ -189,6 +189,7 @@ else{
             $price = $package["Price"];
             $budget = $package["Budget"];
             $wattrange = $package["WattRange"];
+            $id = $package['ID'];
 
 ?>
 <!-- ONE -->
@@ -225,7 +226,7 @@ else{
                 <div class="sent-message">Thank you for choosing us! Please select your choice then proceed to check out.</div>
               </div>
               
-              <div class="text-right"> <a href="quote-waybill.php" class="w">PURCHASE</a></div>
+              <div class="text-right"><?php echo' <a href="quote-waybill.php?purchaseID='.$id.'"class="w">PURCHASE</a>';?></div>
           <!-- end PURCHASE button -->
 
           </div>
@@ -309,7 +310,7 @@ else{
         &copy; Copyright <strong><span>SolarX</span></strong> All Rights Reserved
       </div>
       <div class="credits">
-        Designed by Team JAABLEE
+        Designed by Team JAEBLEZ
       </div>
     </div>
   </footer><!-- End Footer -->
