@@ -21,7 +21,10 @@ $powerconsumption = "";
 
 if(isset($_GET["id"])){
     $_SESSION["id"] = $_GET["id"];
+
 }
+$orderID = $_GET['purchaseID'];
+
 
 if(isset($_SESSION["id"])){
     $query = "select * from ".$tablename." where id=".$_SESSION["id"];
@@ -41,7 +44,8 @@ if(isset($_SESSION["id"])){
         }
     
     }
-      $package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
+    // $package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
+      $package_query = "select * from Packages where id=$orderID";
       $package_result = mysqli_query($conn, $package_query);
 }
 else{
@@ -138,7 +142,7 @@ else{
 
                 <thead>
                   <tr>
-                    <th scope="col">TO address:  <?php echo decode($baranggay)?> , <?php echo decode($city)?> , <?php echo decode($province)?></th>
+                    <th scope="col">Location:  <?php echo decode($baranggay)?> , <?php echo decode($city)?> , <?php echo decode($province)?></th>
                   </tr>
                 </thead>
 
@@ -166,7 +170,8 @@ else{
                       <br> Address: Landmark Subdivision Brgy. Parian, Calamba City Laguna 4027, Philippines
                       </td>
                   </tr>
-                </thead><?php
+                </thead>        
+<?php
   if (mysqli_num_rows($package_result)>0)
   {
         while($package = mysqli_fetch_assoc($package_result))
@@ -179,7 +184,9 @@ else{
             $wattrange = $package["WattRange"];
 
 ?>
+
                 <thead>
+
                   
                   <tr>
                     <th scope="col">ORDER DETAILS</th>
@@ -188,11 +195,10 @@ else{
                     <br><?php echo $watts ?>
                     <br><?php echo $price ?></td>
                   </tr>
+                  <?php }}?>
                 </thead>
-<?php }}?>
 
 
-              </table>
 
               </table>
 
@@ -262,7 +268,7 @@ else{
         &copy; Copyright <strong><span>SolarX</span></strong> All Rights Reserved
       </div>
       <div class="credits">
-        Designed by Team JAABLEE
+        Designed by Team JAEBLEZ
       </div>
     </div>
   </footer><!-- End Footer -->
