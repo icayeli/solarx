@@ -87,6 +87,12 @@ if(isset($_POST["delete"]))
                 <th>Baranggay</th>
                 <th>Budget</th>
                 <th>Power Consumption</th>
+		<th>Name</th>
+                <th>Details</th>
+                <th>Watts</th>
+                <th>Price</th>
+                <th>Budget</th>
+                <th>WattRange</th>
 				<th>Actions</th>
 
 <?php
@@ -101,7 +107,7 @@ $city = "";
 $budget = "";
 $powerconsumption = "";
 
-$sql = "SELECT * FROM customers";
+$sql = "SELECT * FROM customers INNER JOIN packages ON customers.ID = packages.ID";
 $result = $conn->query($sql);
 if ($result->num_rows>0){
     while ($row = $result->fetch_assoc()){
@@ -115,6 +121,12 @@ if ($result->num_rows>0){
 		<td>" . decode($row["Baranggay"]) . "</td>
 		<td>" . $row["Budget"] . "</td>
 		<td>" . $row["Power_Consumption"] . "</td>
+		<td>" . $row["Name"] . "</td>
+		<td>" . $row["Details"] . "</td>
+		<td>" . $row["Watts"] . "</td>
+		<td>" . $row["Price"] . "</td>
+		<td>" . $row["Budget"] . "</td>
+		<td>" . $row["WattRange"] . "</td>
 		<td><form method = 'post'><button name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";      
     }
 }
