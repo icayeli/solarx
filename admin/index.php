@@ -88,10 +88,8 @@ if(isset($_POST["delete"]))
                 <th>Budget</th>
                 <th>Power Consumption</th>
 		<th>Name</th>
-                <th>Details</th>
-                <th>Watts</th>
-                <th>Price</th>
-                <th>WattRange</th>
+                <th>Type</th>
+
 				<th>Actions</th>
 
 <?php
@@ -122,9 +120,6 @@ if ($result->num_rows>0){
 		<td>" . $row["Power_Consumption"] . "</td>
 		<td>" . $row["Name"] . "</td>
 		<td>" . $row["Details"] . "</td>
-		<td>" . $row["Watts"] . "</td>
-		<td>" . $row["Price"] . "</td>
-		<td>" . $row["WattRange"] . "</td>
 		<td><form method = 'post'><button name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";      
     }
 }
