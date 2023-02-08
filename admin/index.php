@@ -20,21 +20,73 @@ if(isset($_POST["delete"]))
 }
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/solarx logo.png" rel="icon">
+  <link href="../assets/img/solarx logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
     <body>
-		<a href = "login.php"><button>Logout</button></a>
-           <table>
+    	  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+     <h2 class="logo me-auto"><a href="index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/solarx logo.png" alt="">&nbspSolarX</a></h2>
+      
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted scrollto" href="login.php">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<center>
+	<br>
+	<br>
+	<br>
+           <table class="table table-bordered">
+
             <tr>
                 <th>ID</th>
-                <th>First_Name</th>
-                <th>Last_Name</th>
-                <th>Mobile_Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile Number</th>
                 <th>Email</th>
                 <th>Province</th>
                 <th>City</th>
                 <th>Baranggay</th>
                 <th>Budget</th>
-                <th>Power_Consumption</th>
+                <th>Power Consumption</th>
 				<th>Actions</th>
 
 <?php
@@ -74,5 +126,9 @@ else{
 ?>
 
       </table>
+  </tr>
+</center>
+
+
    </body>
 </html>
