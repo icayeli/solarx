@@ -56,7 +56,7 @@ if(isset($_POST["delete"]))
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-     <h2 class="logo me-auto"><a href="index.html" class="logo d-flex align-items-center">
+     <h2 class="logo me-auto"><a href="../index.html" class="logo d-flex align-items-center">
         <img src="../assets/img/solarx logo.png" alt="">&nbspSolarX</a></h2>
       
 
