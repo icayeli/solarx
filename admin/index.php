@@ -91,7 +91,6 @@ if(isset($_POST["delete"]))
                 <th>Details</th>
                 <th>Watts</th>
                 <th>Price</th>
-                <th>Budget</th>
                 <th>WattRange</th>
 				<th>Actions</th>
 
@@ -125,7 +124,6 @@ if ($result->num_rows>0){
 		<td>" . $row["Details"] . "</td>
 		<td>" . $row["Watts"] . "</td>
 		<td>" . $row["Price"] . "</td>
-		<td>" . $row["Budget"] . "</td>
 		<td>" . $row["WattRange"] . "</td>
 		<td><form method = 'post'><button name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";      
     }
