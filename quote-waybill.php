@@ -18,6 +18,7 @@ $province = "";
 $city = "";
 $budget = "";
 $powerconsumption = "";
+$customerID = "";
 
 if(isset($_GET["id"])){
     $_SESSION["id"] = $_GET["id"];
@@ -40,13 +41,15 @@ if(isset($_SESSION["id"])){
             $city = $customer["City"];
             $budget = $customer["Budget"];
             $powerconsumption = $customer["Power_Consumption"];
+            $customerID = $customer["ID"];
     
         }
     
     }
-    // $package_query = "select * from Packages where Budget='".$budget."' AND WattRange='".$powerconsumption."'";
       $package_query = "select * from Packages where id=$orderID";
       $package_result = mysqli_query($conn, $package_query);
+      $update_query = "update customers set PackageID=$orderID where ID=$customerID";
+      mysqli_query($conn, $update_query);
 }
 else{
     header("Location: index.html");
@@ -65,7 +68,7 @@ else{
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
+    <!-- Favicons -->
   <link href="assets/img/solarx logo.png" rel="icon">
   <link href="assets/img/solarx logo.png" rel="apple-touch-icon">
 
