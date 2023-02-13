@@ -103,9 +103,7 @@ $city = "";
 $budget = "";
 $powerconsumption = "";
 
-$sql = "SELECT A.ID ,A.First_Name ,A.Last_Name ,A.Mobile_Number ,A.Email ,A.Province ,A.City ,A.Baranggay ,A.Budget ,A.Power_Consumption,
-B.Name, B.Details 
-FROM customers as A INNER JOIN packages as B ON A.ID = B.ID;";
+$sql = "SELECT customers.ID, customers.First_Name, customers.Last_Name, customers.Mobile_Number, customers.Email, customers.Province, customers.City, customers.Baranggay, customers.Budget, customers.Power_Consumption, packages.Name, packages.Details FROM customers INNER JOIN packages ON customers.PackageID = packages.ID";
 $result = $conn->query($sql);
 if ($result->num_rows>0){
     while ($row = $result->fetch_assoc()){
@@ -123,10 +121,6 @@ if ($result->num_rows>0){
 		<td>" . $row["Details"] . "</td>
 		<td><form method = 'post'><button name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";      
     }
-}
-
-else{
-    echo"No results";
 }
 
 ?>
