@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 01:42 AM
+-- Generation Time: Feb 13, 2023 at 02:18 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 7.3.31
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,15 +31,19 @@ CREATE TABLE `customers` (
   `ID` int(11) NOT NULL,
   `First_Name` varchar(40) NOT NULL,
   `Last_Name` varchar(40) NOT NULL,
-  `Mobile_Number` varchar(11) NOT NULL,
+  `Mobile_Number` varchar(40) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Province` varchar(50) NOT NULL,
   `City` varchar(50) NOT NULL,
   `Baranggay` varchar(50) NOT NULL,
   `Budget` varchar(50) NOT NULL,
-  `Power_Consumption` varchar(50) NOT NULL
+  `Power_Consumption` varchar(50) NOT NULL,
+  `PackageID` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `customers`
+--
 --
 -- Indexes for dumped tables
 --
@@ -58,7 +62,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
