@@ -87,7 +87,7 @@ if(isset($_POST["delete"]))
                 <th>Baranggay</th>
                 <th>Budget</th>
                 <th>Power Consumption</th>
-                <th>Type</th>
+                <th>Name</th>
                 <th>Details</th>
 				<th>Actions</th>
 
@@ -119,7 +119,7 @@ if ($result->num_rows>0){
 		<td>" . decode($row["Baranggay"]) . "</td>
 		<td>" . $row["Budget"] . "</td>
 		<td>" . $row["Power_Consumption"] . "</td>
-                <td>" . $row["Name"] . "</td>
+    <td>" . $row["Name"] . "</td>
 		<td>" . $row["Details"] . "</td>
 		<td><form method = 'post'><button name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";      
     }
