@@ -90,6 +90,17 @@ if(isset($_POST["delete"]))
                 <th>Type</th>
                 <th>Details</th>
 				<th>Actions</th>
+<script>
+function myFunction() {
+  let text = "Press a button!\nEither OK or Cancel.";
+  if (confirm(text) == true) {
+    text = "You pressed OK!";
+  } else {
+    text = "You canceled!";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
 
 <?php
 
@@ -119,7 +130,9 @@ if ($result->num_rows>0){
 		<td>" . $row["Power_Consumption"] . "</td>
                 <td>" . $row["Name"] . "</td>
 		<td>" . $row["Details"] . "</td>
-		<td><form method = 'post'><button name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";      
+
+
+		<td><form method = 'post'><button onclick='myFunction()' name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";     
     }
 }
 
