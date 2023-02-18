@@ -136,10 +136,15 @@ else{
       <div class="container" data-aos="fade-up">
 
         <div class="row justify-content-center">
+          <center>
+              <h3 class="card-title">Please take a screenshot of the waybill before you proceed.</h3>
+            </center>
+            <br> <br> <br>
 
          <div class="card">
+
             <div class="card-body">
-              <h5 class="card-title">W A Y B I L L</h5>
+
     
               <table class="table table-bordered">
 
