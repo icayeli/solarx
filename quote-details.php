@@ -92,15 +92,15 @@ else{
       
 
       <nav id="navbar" class="navbar">
-        <ul>
+                <ul>
           <li><a class="nav-link scrollto active" href="index.html #hero">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html #about">About</a></li>
           <li><a class="nav-link scrollto" href="index.html #services">Services</a></li>
           <li><a class="nav-link scrollto" href="index.html #portfolio">Product Items</a></li>
           <li><a class="nav-link   scrollto" href="index.html #pricing">Packages</a></li>
           <li><a class="nav-link scrollto" href="index.html #faq">FAQs</a></li>
-          <li><a class="nav-link scrollto" href="index.html #contact">Contact</a></li>
           <li><a class="nav-link scrollto" href="index.html #team">Team</a></li>
+          <li><a class="nav-link scrollto" href="index.html #contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="index.html #about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
