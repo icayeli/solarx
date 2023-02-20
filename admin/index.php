@@ -89,21 +89,8 @@ if(isset($_POST["delete"]))
                 <th>Power Consumption</th>
                 <th>Type</th>
                 <th>Details</th>
-				<th>Actions</th>
-<script>
-function myFunction() {
-  let text = "Press a button!\nEither OK or Cancel.";
-  if (confirm(text) == true) {
-    text = "You pressed OK!";
-  } else {
-    text = "You canceled!";
-  }
-  document.getElementById("demo").innerHTML = text;
-}
-</script>
-
+		<th>Actions</th>
 <?php
-
 $firstname = ""; //input from MLTSampleDB.php
 $lastname = ""; //input from MLTSampleDB.php
 $mobile = "";
@@ -130,14 +117,11 @@ if ($result->num_rows>0){
 		<td>" . $row["Power_Consumption"] . "</td>
                 <td>" . $row["Name"] . "</td>
 		<td>" . $row["Details"] . "</td>
-
-
-		<td><form method = 'post'><button onclick='myFunction()' name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";     
+		<td><form method = 'post'><button  onclick = \"return confirm('Are you sure you want to delete entry ".$row["ID"]."?')\" 
+		name = 'delete' value = '".$row["ID"]."'>Delete</button></form></td></tr>";     
     }
 }
-
 ?>
-
       </table>
   </tr>
 </center>
