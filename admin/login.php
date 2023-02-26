@@ -2,11 +2,11 @@
 session_start();
 session_destroy();
 session_start();
-$servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
-$username = "root"; // default username
-$password = ""; //password used during installation of xampp
-$dbname = "capstone_database"; //Created database in phpmyadmin
-$tablename = "customers"; //Created table in phpmyadmin
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "capstone_database";
+$tablename = "customers";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if(isset($_POST["submit"]))
@@ -55,8 +55,6 @@ if(isset($_POST["submit"]))
   <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -113,10 +111,6 @@ if(isset($_POST["submit"]))
   <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-
 </body>
-
 </html>
