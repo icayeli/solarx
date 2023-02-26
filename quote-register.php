@@ -25,8 +25,7 @@
   <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
+  
   <link href="assets/css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="">
@@ -192,10 +191,6 @@ window.onload = function() {
                       <input type="email" name="Email" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
-
-
-
-             
              
                 Province: <select name="Province" id="subject">
                 <option value="" selected="selected">Select Province</option>
@@ -234,8 +229,7 @@ window.onload = function() {
                     <option>6.1 KW or higher</option>
                   </select>
                 </div>
-
-
+                    
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
@@ -247,33 +241,18 @@ window.onload = function() {
                     <div class="col-12"> 
                       <button class="btn btn-primary w-100" type="submit">Register</button>
                      </div>
-
-                    
-
                   </form>
-
                 </div>
               </div>
-
               <div class="credits">
                 <a>Designed by JAABLEE</a>
               </div>
-
             </div>
           </div>
         </div>
-
       </section>
-
     </div>
   </main><!-- End #main -->
-
-
-
-
-
-
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -286,9 +265,7 @@ window.onload = function() {
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
