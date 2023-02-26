@@ -3,14 +3,14 @@ session_start();
 
 include "encrypter.php";
 
-$servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
-$username = "root"; // default username
-$password = ""; //password used during installation of xampp
-$dbname = "capstone_database"; //Created database in phpmyadmin
-$tablename = "customers"; //Created table in phpmyadmin
+$servername = "127.0.0.1"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "capstone_database"; 
+$tablename = "customers"; 
 $conn = new mysqli($servername, $username, $password, $dbname);
-$firstname = ""; //input from MLTSampleDB.php
-$lastname = ""; //input from MLTSampleDB.php
+$firstname = ""; 
+$lastname = ""; 
 $mobile = "";
 $email = "";
 $baranggay = "";
@@ -22,10 +22,8 @@ $customerID = "";
 
 if(isset($_GET["id"])){
     $_SESSION["id"] = $_GET["id"];
-
 }
 $orderID = $_GET['purchaseID'];
-
 
 if(isset($_SESSION["id"])){
     $query = "select * from ".$tablename." where id=".$_SESSION["id"];
@@ -42,9 +40,7 @@ if(isset($_SESSION["id"])){
             $budget = $customer["Budget"];
             $powerconsumption = $customer["Power_Consumption"];
             $customerID = $customer["ID"];
-    
         }
-    
     }
       $package_query = "select * from Packages where id=$orderID";
       $package_result = mysqli_query($conn, $package_query);
@@ -54,7 +50,6 @@ if(isset($_SESSION["id"])){
 else{
     header("Location: index.html");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +70,6 @@ else{
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -84,9 +78,7 @@ else{
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -97,7 +89,6 @@ else{
 
      <h2 class="logo me-auto"><a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/solarx logo.png" alt="">&nbspSolarX</a></h2>
-      
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -117,7 +108,6 @@ else{
     </div>
   </header><!-- End Header -->
 
-
 <!-- ==========main========= -->
   <main id="main">
 
@@ -129,9 +119,7 @@ else{
           <li>Purchase Details</li>
         </ol>
         <h2>WAYBILL</h2>
-
       </div>
-
 <br>
       <div class="container" data-aos="fade-up">
 
@@ -293,7 +281,6 @@ else{
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
