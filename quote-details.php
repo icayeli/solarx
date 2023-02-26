@@ -3,14 +3,14 @@ session_start();
 
 include "encrypter.php";
 
-$servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
-$username = "root"; // default username
-$password = ""; //password used during installation of xampp
-$dbname = "capstone_database"; //Created database in phpmyadmin
-$tablename = "customers"; //Created table in phpmyadmin
+$servername = "127.0.0.1";
+$username = "root"; 
+$password = ""; 
+$dbname = "capstone_database"; 
+$tablename = "customers"; 
 $conn = new mysqli($servername, $username, $password, $dbname);
-$firstname = ""; //input from MLTSampleDB.php
-$lastname = ""; //input from MLTSampleDB.php
+$firstname = ""; 
+$lastname = ""; 
 $mobile = "";
 $email = "";
 $baranggay = "";
