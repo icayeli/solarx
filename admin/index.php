@@ -1,11 +1,11 @@
 <?php
 session_start();
 include "encrypter.php";
-$servername = "127.0.0.1"; //default servername for phpmyadmin can also be 'localhost'
-$username = "root"; // default username
-$password = ""; //password used during installation of xampp
-$dbname = "capstone_database"; //Created database in phpmyadmin
-$tablename = "customers"; //Created table in phpmyadmin
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "capstone_database";
+$tablename = "customers";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if(!isset($_SESSION["loggedin"]))
@@ -46,8 +46,6 @@ if(isset($_POST["delete"]))
   <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -91,8 +89,8 @@ if(isset($_POST["delete"]))
                 <th>Details</th>
 		<th>Actions</th>
 <?php
-$firstname = ""; //input from MLTSampleDB.php
-$lastname = ""; //input from MLTSampleDB.php
+$firstname = ""; 
+$lastname = "";
 $mobile = "";
 $email = "";
 $baranggay = "";
@@ -125,8 +123,6 @@ if ($result->num_rows>0){
       </table>
   </tr>
 </center>
-
-
    </body>
 </html>
   
