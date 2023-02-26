@@ -78,7 +78,6 @@ else{
 </head>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
@@ -86,7 +85,6 @@ else{
      <h2 class="logo me-auto"><a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/solarx logo.png" alt="">&nbspSolarX</a></h2>
       
-
       <nav id="navbar" class="navbar">
                 <ul>
           <li><a class="nav-link scrollto active" href="index.html #hero">Home</a></li>
@@ -119,8 +117,6 @@ else{
 
       </div>
     </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
 
 <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
@@ -236,7 +232,6 @@ else{
     echo "<h3 align='center'><br><br><br><br>Sorry but we don't have a recommended package for you. Please try again with another budget and power consumption option.</h3>";
 
   }
-  
 ?>
 <center>
   <br>
